@@ -25,7 +25,6 @@
 
 
 import mraa
-import copy
 
 # Declare GPIOS
 
@@ -57,14 +56,14 @@ for btn in pushbtns:
 def turnOn(index):
     leds[index].write(1)
 
+def turnOff(index):
+    leds[index].write(0)
+
 while (True):
     index = 0
-    ledstmp = copy.copy(leds)
     for btn in pushbtns:
         if (btn.read()==0):
             turnOn(index)
-            ledstmp.pop(index)
-        else:
-            index += 1
-    for led in ledstmp:
-        led.write(0)
+        if (btn.read()==1):
+            turnOff(index)
+        index += 1

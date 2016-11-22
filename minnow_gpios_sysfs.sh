@@ -17,6 +17,8 @@
 # http://elinux.org/Calamari_Lure
 
 # LEDs
+
+# GPIOS changed on Linux 3.18 + 256
 #  R = GPIO_S5_0    : MRAA 21 : Linux Sysfs GPIO = gpio338
 #  G = GPIO_S5_0    : MRAA 23 : Linux Sysfs GPIO = gpio339
 #  B = ILB_8254_SPKR    : MRAA 26 : Linux Sysfs GPIO = gpio464
